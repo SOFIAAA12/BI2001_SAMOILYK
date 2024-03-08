@@ -31,23 +31,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int counter = 0;
 
-  void _incrementCounter() {
+  void AddCounter() {
     setState(() {
-      _counter++;
+      counter++;
     });
   }
 
-  void _incrementCounter1() {
+  void SubtractCounter() {
     setState(() {
-      _counter--;
+      counter--;
     });
   }
 
-  void _changeCounterToZero() {
+  void changeCounterToZero() {
     setState(() {
-      _counter = 0;
+      counter = 0;
     });
   }
 
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Значение инкремента:',
             ),
             Text(
-              '$_counter',
+              '$counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
 
@@ -79,7 +79,7 @@ Row(
             ElevatedButton(
               onPressed:( )
               {
-                _incrementCounter1(); // Делаем что-нибудь, когда кнопка нажата.
+                SubtractCounter(); // Делаем что-нибудь, когда кнопка нажата.
               },
               child: Text('-'),
                 style: ElevatedButton.styleFrom(
@@ -93,7 +93,7 @@ Row(
             ElevatedButton(
                 onPressed:( )
                 {
-                  _incrementCounter(); // Делаем что-нибудь, когда кнопка нажата.
+                  AddCounter(); // Делаем что-нибудь, когда кнопка нажата.
                 },
                 child: Text('+'),
                 style: ElevatedButton.styleFrom(
@@ -110,7 +110,7 @@ Row(
             TextButton(
               onPressed: (
                   ) {
-                _changeCounterToZero();
+                changeCounterToZero();
               },
               child: Text('Сбросить'),
               style: TextButton.styleFrom(
@@ -122,10 +122,6 @@ Row(
     )
       );
 
-
-
-
-       // This trailing comma makes auto-formatting nicer for build methods.
 
 
   }
